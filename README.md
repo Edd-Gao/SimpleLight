@@ -57,7 +57,7 @@ run the webpage server:
  ```
 run the Myo Connect adapter:
  ```bash
- $ nodejs ~/light_control_project/PyoConnect_v1.0/light_control.pyoc
+ $ python ~/light_control_project/PyoConnect_v1.0/light_control.pyoc
  ```
 
 Enjoy it!
