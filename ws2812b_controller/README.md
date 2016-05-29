@@ -48,7 +48,7 @@ Hardware
 Wiring NeoPixels to work with a Raspberry Pi is quite simple. The only issue to deal with is converting the Pi's GPIO from 3.3V up to about 5V for the NeoPixel to read. (GPIO voltage must be higher than 70% of power supply)
 We use a 1N4001 diode to reduce the power supply voltage slightly so the NeoPixels can read the Pi's 3.3V output, since we have only 4 NeoPixels.
 The hardware is wired up as follows:
-
+![circuit](../img/fritzing.png)
 * Connect power supply ground to Raspberry Pi ground, and NeoPixel ground.
 * Connect power supply 5V to 1N4001 diode anode (side without the stripe).
 * Connect 1N4001 diode cathode (side with the stripe) to NeoPixel 5V.
