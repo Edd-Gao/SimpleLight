@@ -6,7 +6,7 @@ Hardware
 The hardware is quite simple. We got 4 adafruit neopixel(ws2812b) led and connect them serially. The data in port is connected to pin 18, vcc and gnd are connected directly to raspberry pi.
 Setup software for raspberry pi 2B
 ---
-The project is configured for raspberry pi 2B. Before running the code, you need to install some dependencies.  
+The project is configured for raspberry pi 2B. Before running the code, you need to install some dependencies.
 1. Install the newest raspbian image to a SD card. In our case, we use raspbian jessie.
 2. Connect the raspberry pi to the Internet with a cable. Log into the board with ssh.
 3. follow the instruction in (http://www.fernandocosentino.net/pyoconnect/) to install dependencies for PyoConnect 1.0.
