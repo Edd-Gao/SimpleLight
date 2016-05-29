@@ -1,0 +1,46 @@
+#!usrbinpython
+'''DON'T TOUCH THESE FIRST LINES! '''
+'''============================== '''
+from PyoConnect import *
+
+myo = Myo(sys.argv[1] if len(sys.argv) >= 2 else None)
+'''============================== '''
+'''OK, edit below to make your own fancy script ^.^ '''
+
+# Edit here
+import db_connecter
+
+
+def onPoseEdge(pose, edge):
+    # count = 0
+    db = db_connecter.DBConnecter()
+    db.init()
+
+    print pose + "," + edge
+    visualeffect = db.get_visual_effect()
+    if pose == "doubleTap" and visualeffect == "feature4":
+        db.insert_visual_effect("feature1")
+    elif pose == "doubleTap" and visualeffect == "feature1":
+        db.insert_visual_effect("feature2")
+    elif pose == "doubleTap" and visualeffect == "feature2":
+        db.insert_visual_effect("feature3")
+    elif pose == "doubleTap" and visualeffect == "feature3":
+        db.insert_visual_effect("feature4")
+
+
+# Stop editting
+
+# Comment out below the events you are not using
+# myo.onLock = onLock
+# myo.onUnlock = onUnlock
+myo.onPoseEdge = onPoseEdge
+# myo.onPeriodic = onPeriodic
+# myo.onWear = onWear
+# myo.onUnwear = onUnwear
+# myo.onEMG = onEMG
+# myo.onBoxChange = onBoxChange
+
+myo.connect()
+while True:
+    myo.run()
+    myo.tick()

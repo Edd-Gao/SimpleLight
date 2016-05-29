@@ -1,0 +1,33 @@
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          SimpleLight.sh
+# Required-Start:    $local_fs $mysqld
+# Required-Stop:     $local_fs $mysqld
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start at boot time
+# Description:       start the daemon of SimpleLight.
+### END INIT INFO
+
+case "$1" in
+start)
+	sleep 10
+	nodejs /home/pi/light_control_project/server/SimpleLight.js 1>/home/pi/light_control_project/log/SimpleLight.log 2>&1 &
+	python /home/pi/light_control_project/PyoConnect_v1.0/light_control.pyoc 1>/home/pi/light_control_project/log/Pyo.log 2>&1 &
+	sudo /home/pi/light_control_project/ws2812b_controller/ws2812b_raspberry_pi2 1>/home/pi/ws2812b.log 2>&1 &
+	;;
+reload)
+	nodejs /home/pi/autorun/SimpleLight.js
+	python /home/pi/PyoConnect_v1.0/test.pyoc
+	sudo /home/pi/ws2812b-raspberry-pi2/test
+	;;
+force-reload|restart|stop)
+	;;
+*)
+	echo "Usage: /etc/init.d/SimpleLight.sh {start|reload}"
+	exit 1
+	;;
+esac
+
+exit 0
+

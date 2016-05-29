@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Simple Light</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="author" content="Fajar Chandra" />
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.touchwheelcolorpicker.js"></script>
+	<script type="text/javascript" src="js/socket.io.js"></script>
+	<script type="text/javascript" src="js/Scaling.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/wheelcolorpicker.css" />
+	<script type="text/javascript">
+		$(function() {
+			//$('#color-inline1').wheelColorPicker();
+			//$('#color-inline2').wheelColorPicker({ sliders: "whsvp", preview: true, format: "css" });
+			//$('#color-inline3').wheelColorPicker({ live: false, sliders: "wrgbap", format: "rgba" });
+			$('#color-block').wheelColorPicker({ layout: 'block', sliders: "vp", format: "rgba" });
+			$('#color-block').scailing();
+		});
+	</script>
+	<script>
+		var socket = io();
+		//socket.emit('init');
+		socket.on('init',function(msg){
+			hsv = $.fn.wheelColorPicker.rgbToHsv(msg.r,msg.g,msg.b);
+			console.log(hsv,msg);
+			$('#color-block').wheelColorPicker('setColor',hsv);	
+		});
+		updateLight = function(){
+		selectedColor = $('#color-block').wheelColorPicker('getColor');
+		updatePacket = {'Red':selectedColor.r, 'Green':selectedColor.g, 'Blue':selectedColor.b};
+		//console.log(updatePacket);
+		socket.emit('light update',updatePacket);
+		}
+		timer = setInterval(updateLight,100);
+	</script>
+</head>
+
+<body id="canvas">
+
+	<input type="text" id="color-block" value="#000000" />
+	
+</body>
+
+</html>

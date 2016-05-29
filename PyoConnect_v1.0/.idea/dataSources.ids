@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - lightcontrol@localhost" uuid="2d5eff51-4ad0-42d5-bdec-b7d4d5755b52">
+    <database-info product="MySQL" version="5.5.49-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="lightcontrol"/>
+      <table id="2" parent="1" name="light_settings"/>
+      <column id="3" parent="2" name="green">
+        <data-type>decimal(10,10)</data-type>
+      </column>
+      <column id="4" parent="2" name="blue">
+        <data-type>decimal(10,10)</data-type>
+      </column>
+      <column id="5" parent="2" name="red">
+        <data-type>decimal(10,10)</data-type>
+      </column>
+      <column id="6" parent="2" name="visualEffect">
+        <data-type>char(20)</data-type>
+      </column>
+      <column id="7" parent="2" name="num">
+        <data-type>int(11)</data-type>
+      </column>
+    </database-model>
+  </data-source>
+</component>

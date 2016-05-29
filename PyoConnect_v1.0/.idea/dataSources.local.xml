@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - lightcontrol@localhost" uuid="2d5eff51-4ad0-42d5-bdec-b7d4d5755b52">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>lightcontrol.*</schema-pattern>
+      <default-schemas>lightcontrol.*</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,10 @@
+{
+  "name": "light-control",
+  "version": "0.0.1",
+  "description": "This is the web app to control a ws2812b light",
+  "dependencies": {
+    "express": "~4.10.2",
+    "socket.io": "~1.2.1",
+    "mysql": "~2.10.2"
+  }
+}
