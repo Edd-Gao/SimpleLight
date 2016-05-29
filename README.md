@@ -64,10 +64,10 @@ Enjoy it!
 ---
 Connect raspberry pi to a router, then you can access the webpage at http://ip_of_raspberry_pi:3000. You should be able to change the light color of the leds through a palette (in mode one).  
 Myo connect is also supported. you can use double click gesture to change the visual effect.
-* mode 1: Change the led color with the web palette.
-* mode 2: Rainbow Effect.
-* mode 3: Flash Effect.
-* mode 4: Flashing Rainbow Effect.
+* mode 1: Rainbow Effect.
+* mode 2: Flash Effect.
+* mode 3: Flashing Rainbow Effect.
+* mode 4: Change the led color with the web palette.
 
 
  
