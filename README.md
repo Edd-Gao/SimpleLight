@@ -27,7 +27,7 @@ mysql> source ~/light_control_project/sql/database.sql
 6. get the source code:
 ```bash
 $ cd ~
-$ git clone 
+$ git clone https://github.com/gaochangyu/SimpleLight.git
 ```
 7. make the ws2812b_controller:
 ```bash
