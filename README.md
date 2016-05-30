@@ -1,7 +1,7 @@
 [Simple Light Project](https://github.com/gaochangyu/SimpleLight)
 ===
 Programmer: Gao Changyu, Qian Jiayan, Yang Xuerui
-![demostration](img/demonstration.png)
+![demostration](img/demonstration.jpg)
 Hardware
 ---
 The hardware is quite simple. We got 4 adafruit neopixel(ws2812b) led and connect them serially. The data in port is connected to pin 18, vcc and gnd are connected directly to raspberry pi.
