@@ -143,7 +143,7 @@ try {
           _ws2812b->setPixelColor(i, red, green, blue);
         }
         _ws2812b->show();
-        //usleep(100000);
+        usleep(100000);
       }
 
   }
