@@ -1,6 +1,7 @@
 #Software Structure
 The software stucture is shown below:
-![structure]()
+![structure](../img/structure.png)
+
 There are three main modules:
 1. The NeoPixel Controller: This modules update the light color with data from mysql database. We implemented four Visual Effects in this module.
 2. The palette web server: This modules serves a palette web page. Users can visit the page and change the color and brightness of the Neo Pixel. The selected color will be converted to RGB value and stored into mysql database.
