@@ -1,4 +1,4 @@
-![Simple Light Project](https://github.com/gaochangyu/SimpleLight)
+[Simple Light Project](https://github.com/gaochangyu/SimpleLight)
 ===
 Programmer: Gao Changyu, Qian Jiayan, Yang Xuerui
 Hardware
