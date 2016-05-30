@@ -69,5 +69,7 @@ Myo connect is also supported. you can use double click gesture to change the vi
 * mode 3: Flashing Rainbow Effect.
 * mode 4: Change the led color with the web palette.
 
-
+Docs
+---
+All the documents about the project are in Docs folder.
  
